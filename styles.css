@@ -1,0 +1,560 @@
+/* H1 */
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+
+/* Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --azul: #3ebfff;
+    --branco: #fff;
+    --preto: #000;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Vidaloka', serif;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    background-color: var(--azul);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    padding: 1.5em 2.5em;
+    width: 100%;
+}
+
+.navbar  a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.nav-container p{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5em;
+}
+
+.nav-item:nth-child(4) p{
+    padding: .5rem 1.5rem;
+    border-radius: 30px;
+    margin: 0;
+    background-color: var(--branco);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.navbar-contato p{
+    color: #000;
+}
+
+/* Header */
+.header{
+    background-color: var(--azul);
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.header h1{
+    max-width: 40%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 3.5rem;
+    position: absolute;
+    color: var(--branco);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+.img{
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    background: url("../images/image-header.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sobre nós, serviços e projetos */
+.pop-up{
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: fixed;
+    padding: 10%;
+    width: 100%;
+    height: 100vh;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: rgb(0,0,0,.4);
+    z-index: 3;
+}
+
+.pop-up-wrapper{
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 10%;
+    width: 80%;
+}
+
+.pop-up svg{
+    width: 1.5rem;
+    position: absolute;
+    right: 22%;
+    top: 30%;
+}
+
+.secao1, .secao2, .secao3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 80vh;
+    padding: 0;
+}
+
+.txt-esq1, .txt-dir2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--branco);
+    width: 50%;
+}
+
+.wrapper-secao1, .wrapper-secao2{
+    width: 65%;
+}
+
+.wrapper-secao1 button, .wrapper-secao2 button{
+    font-weight: 700;
+    border: none;
+    line-height: 5px;
+    width: 30%;
+    background-color: #fff;
+}
+
+.wrapper-secao1 button{
+    border-bottom: 10px solid rgba(255,251,194,255);
+}
+
+.wrapper-secao2 button {
+    border-bottom: 10px solid rgba(254,114,99,.3);
+}
+
+.txt-dir1{
+    background: url("../images/image-transform.jpg");
+}
+
+.txt-esq2{
+    background: url("../images/image-stand-out.jpg");
+}
+
+.txt-dir1, .txt-esq2{
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 50%;
+}
+
+.txt-esq3, .txt-dir3{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.txt-esq3 h3, .txt-dir3 h3{
+    color: #255b4f;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.txt-esq3 p, .txt-dir3 p{
+    color: #255b4f;
+    text-align: center;
+    padding-bottom: 2rem;
+    width: 55%;
+    font-size: 1rem;
+}
+
+.txt-esq3{
+    background: url("../images/image-graphic-design.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 50%;
+}
+
+.txt-dir3{
+    background: url("../images/image-photography.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 50%;
+}
+
+/* Testemunhos */
+.testemunhos{
+    font-weight: 700;
+    padding: 5rem;
+    text-align: center;
+}
+
+.testemunhos h3{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #ccccc3;
+    padding-bottom: 5rem;
+}
+
+.testemunho-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testemunho-wrapper img{
+    margin-bottom: 3rem;
+    border-radius: 50%;
+    width: 30%;
+}
+
+.testemunho1, .testemunho2, .testemunho3{
+    width: 31%;
+    height: auto;
+    color: rgba(0,0,0,.7);
+}
+
+.nome {
+    font-size: 1.2rem;
+    font-family: 'Vidaloka', serif;
+    color: #000;
+}
+
+.profissao{
+    color: #ccccc3;
+}
+
+.secao-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+.img1{
+    background: url("../images/image-gallery-milkbottles.jpg");  
+}
+
+.img2{
+    background: url("../images/image-gallery-orange.jpg");
+}
+
+.img3{
+    background: url("../images/image-gallery-cone.jpg");
+}
+
+.img4{
+    background: url("../images/image-gallery-sugarcubes.jpg");
+}
+
+.img1, .img2, .img3, .img4{
+    height: 60vh;
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Footer */
+.footer{
+    background-color: #90d4c5;
+    color: #337a6b;
+    padding: 5%;
+    text-align: center;
+}
+
+.footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-link a{
+    color: #337a6b;
+    display: inline-block;
+    font-weight: 500;
+    padding: 4%;
+    text-decoration: none;
+}
+
+.social svg{
+    margin: 2% 1% 0 3%;
+    filter: invert(41%) sepia(12%) saturate(1573%) hue-rotate(117deg) brightness(97%) contrast(94%);
+    width: 2%;
+}
+
+/* Seta */
+.seta{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255, .7);
+    border: .5px solid rgb(0, 0, 0, .2);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    width: 3rem;
+    height: 3rem;
+    z-index: 2;
+}
+
+.seta svg{
+    width: 60%;
+    filter: invert(41%) sepia(12%) saturate(1573%) hue-rotate(117deg) brightness(97%) contrast(94%);
+}
+
+@media (max-width: 770px) {
+    h2{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 1rem 1rem 0;
+    }
+
+    .collapse{
+        padding-top: 2.7rem;
+    }
+
+    .collapse:after{
+        position: absolute;
+        content: '';
+        border: 2rem solid transparent;
+        border-right-color: #fff;
+        right: 1.75rem;
+        top: 4.2rem;
+    }
+    
+    .nav-item {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem;
+        z-index: 1;
+    }
+
+    .nav-item p{
+        height: auto;
+        padding: .5rem;
+        margin: 0;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .nav-item a{
+        padding: 0;
+    }
+    
+    .nav-item:nth-child(4) p{
+        background-color: #f7d20a;
+    }
+
+    /* Header */ 
+    .header{
+        padding: 0;
+    }
+    
+    .header h1{
+        max-width: 80%;
+        font-size: 2.5rem;
+        padding-top: 5%;
+        text-align: center;
+    }
+    
+    .arrow{
+        top: 54%;
+    }
+
+    .arrow span{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .img{
+        width: 100%;
+    }
+
+    /* Sobre nós, serviços e projetos*/
+    .pop-up-wrapper{
+        padding: 10% 8%;
+        width: 100%;
+    }
+    
+    .pop-up svg{
+        width: 1rem;
+        position: absolute;
+        right: 20%;
+        top: 30%;
+    }
+
+    .secao1, .secao2, .secao3{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .txt-esq1, .txt-dir2{
+        padding: 20% 10%;
+    }
+
+    .wrapper-secao1, .wrapper-secao2{
+        width: 100%;
+    }
+
+    .txt-esq1, .txt-dir2, .txt-esq3, .txt-dir1, .txt-esq2, .txt-dir3{
+        width: 100%;
+    }
+
+    .txt-esq2{
+        grid-row-start:  2;
+    }
+
+    .txt-esq3 p, .txt-dir3 p{
+        margin: 3% 0;
+        padding: 0 5% 5%;
+        width: 100%;
+    }
+
+    .txt-esq3 h3, .txt-dir3 h3{
+        padding: 0;
+    }
+   
+    .wrapper-secao1 button, .wrapper-secao2 button{
+        width: 50%;
+    }
+
+    /* Testemunhos */
+    .testemunhos{
+        padding: 3rem 1rem;
+    }
+
+    .testemunho-wrapper{
+        flex-direction: column;
+    }
+
+    .testemunho1, .testemunho2, .testemunho3{
+        width: 100%;
+    }
+
+    .secao-img{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img1, .img2, .img3, .img4{
+        width: 100%;
+        height: 50vh;
+    }
+    
+    /* Footer */
+    .footer{
+        background-color: #90d4c5;
+        color: #337a6b;
+        padding: 20% 5%;
+        text-align: center;
+    }
+    
+    .footer-link a{
+        padding: 5%;
+    }
+    
+    .social svg{
+        margin: 5%;
+        width: 6%;
+    }
+
+    /* Seta */
+    .seta{
+        bottom: 4%;
+        right: 6%;
+    }
+}
